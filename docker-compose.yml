@@ -1,0 +1,17 @@
+services:
+  event_deduplicator:
+    build:
+      context: ./build
+    ports:
+      - 5301:5000
+    volumes:
+      - /coypu/static-data/models/event_deduplication/:/data/model/
+    restart: unless-stopped
+    networks:
+      - demo_network
+    container_name: event_deduplication_container
+    image: event_deduplication_container_image
+
+networks:
+  demo_network:
+    external: true

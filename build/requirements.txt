@@ -1,0 +1,4 @@
+flask
+flask_healthz
+sentence-transformers==2.2.2
+simpletransformers==0.64.3
